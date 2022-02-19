@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <title>Student Registration form</title>
+</head>
+
+<body>
+    <div id="message">
+    </div>
+    <!-- NAVBAR BEGIN -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+        <div class="container-fluid">
+            <a class="navbar-brand mx-auto" href="#">Student Enrollment Form</a>
+        </div>
+    </nav>
+    <!-- NAVBAR ENDS -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6 col-md-12 mt-2">
+                <h2 class="pop">Enter Student Details</h2>
+                <!-- FORM BEGINS -->
+                <form id="studentform">
+                    <div class="row p-2 ">
+                        <label for="inputPassword" class="col-sm-2 col-form-label">Name</label>
+                        <div class="col-sm-10">
+                            <input type="name" class="form-control d" id="name" placeholder="Bhavya Aggarwal" required>
+                        </div>
+                    </div>
+                    <div class="row p-2">
+                        <label for="inputPassword" class="col-sm-2 col-form-label">Email</label>
+                        <div class="col-sm-10">
+                            <input type="email" class="form-control d" id="email"
+                                placeholder="bhavya.aggarwal@nagarro.com" required>
+                        </div>
+                    </div>
+                    <div class="row p-2">
+                        <label for="inputPassword" class="col-sm-2 col-form-label">Website</label>
+                        <div class="col-sm-10">
+                            <input class="form-control d " id="website" placeholder="https://www.google.com/" required>
+                        </div>
+                    </div>
+                    <div class="row p-2">
+                        <label for="inputPassword" class="col-sm-2 col-form-label">Image Link</label>
+                        <div class="col-sm-10">
+                            <input class="form-control d" id="imglink" placeholder="./student.jpg" required>
+                        </div>
+                    </div>
+                    <fieldset class="row mb-3 mt-2 p-2">
+                        <legend class="col-form-label col-sm-2 pt-0">Gender</legend>
+                        <div class="col-sm-10">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="male" value="male"
+                                    checked>
+                                <label class="form-check-label" class="myinput" for="male"> Male </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="female"
+                                    value="female">
+                                <label class="form-check-label" class="myinput" for="female"> Female </label>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="row mb-3 mt-2 p-2">
+                        <legend class="col-form-label col-sm-2 pt-0">Skills</legend>
+                        <div class="col-sm-10">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" class="myinput" name="skills"
+                                    id="inlineCheckbox1" value="java">
+                                <label class="form-check-label" for="inlineCheckbox1">Java</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" class="myinput" name="skills"
+                                    id="inlineCheckbox2" value="html" checked>
+                                <label class="form-check-label" for="inlineCheckbox2">HTML</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" class="myinput" name="skills"
+                                    id="inlineCheckbox3" value="css">
+                                <label class="form-check-label" for="inlineCheckbox3">CSS</label>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <button type="button" class="btn btn-primary m-2" onclick="enroll()">Enroll Student</button>
+                    <button type="button" class="btn btn-danger m-2" onclick="clear()">Clear</button>
+                    <button type="button" class="btn btn-danger m-2" onclick="clearall()">ClearList</button>
+                </form>
+            </div>
+            <!-- FORM ENDS -->
+            <div class="col-lg-6 col-md-12 sidebar" id="right">
+                <h2>Enrolled Students</h2>
+                <table class="table table-bordered" id="bhavya">
+                    <thead>
+                        <tr>
+                            <th scope="col" style="width: 50%; color: white; background-color: #198754">
+                                Description</th>
+
+                            <th scope="col" style="width: 50%; color: white; background-color: #198754">Image
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="section-center">
+            <p class="footer-text">
+                &copy;<span class="text-primary">copyright 2020-2021 </span>by fresher training
+            </p>
+        </div>
+    </footer>
+    </div>
+    <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
